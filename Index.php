@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOTES</title>
+    <title>NOTAS</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <h1>NOTES</h1>
+    <h1>NOTAS</h1>
     <form id="notesForm">
-        <label for="note">Write your notes here:</label><br>
-        <textarea id="note" name="note" rows="6" cols="50" placeholder="Write your notes here (maximum 256 characters)" maxlength="256"></textarea><br>
+        <label for="note">Escribe tu nota aqui:</label><br>
+        <textarea id="note" name="note" rows="6" cols="50" placeholder="Escribe tu nota aqui..."></textarea><br>
         <button type="submit">Submit</button>
     </form>
     <div id="notesContainer">
@@ -33,7 +33,7 @@
                     data: { note: note },
                     success: function(response){
                         $('#notesContainer').append('<p>' + response + '</p>');
-                        $('#note').val(''); // Clear the textarea after submission
+                        $('#note').val(''); 
                     }
                 });
             });
